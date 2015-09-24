@@ -1,0 +1,76 @@
+This is the README file for the BOSS Ultracool Dwarfs (BUD) catalog.
+
+Release history:
+BUD_v1_0.fits generated 2014 Sept 24
+
+Caution: 
+Rather than deleting values that were classified as bad or unreliable, I've simply included them with both the information used to examine their quality and my own good/bad flags. For example, every object has a number for their u band photometry, but only 1 objects has u band photometry that is considered good quality. 
+
+Columns:
+
+SDSS spectroscopic data
+   ST              FLOAT     assigned via the hammer, no half types
+   RA              DOUBLE    from SDSS spectroscopic catalog
+   DEC             DOUBLE    from SDSS spectroscopic catalog
+   MJD             STRING    five digit observation identifier
+   PLATE           STRING    four digit observation identifier
+   FIBER           STRING    four digit observation identifier
+   SAMPLE          STRING    DR7M (W11), DR7L (S10), or DR10 (new)
+   TARGFLAG        STRING    original targeting priority, if targeted as part of ancillary program
+SDSS photometric data
+   DESIG_SDSS      STRING    SDSS ID (SDSS J+)
+   RA_SDSS         DOUBLE    position in degrees RA
+   DEC_SDSS        DOUBLE    position in degrees dec
+   RA_SDSS_ERR     DOUBLE    position error (arcseconds)
+   DEC_SDSS_ERR    DOUBLE    position error (arcseconds)
+   PSFMAG          FLOAT     Array[5]    SDSS asinh psf magnitude, ugriz respectively
+   PSFMAGERR       FLOAT     Array[5]    error on psf magnitude, ugriz respectively
+   EXTINCTION      FLOAT     Array[5]    extinction correction from SDSS, has NOT been applied to psfmag
+   FLAGS_SDSS      LONG64    Array[5]    SDSS bitwise photometric flags in ugriz
+   GOODPHOT_SDSS   INT       Array[5]    set to 1 if it passed internal flag checks, 0 if not
+   ERRCUT_SDSS     INT       Array[5]    set to 1 if it passed uncertainty cuts, 0 if not
+   RUN             INT       SDSS photometric identifier 
+   RERUN           INT       SDSS photometric identifier 
+   CAMCOL          INT       SDSS photometric identifier 
+   FIELD           INT       SDSS photometric identifier 
+   OBJ             INT       SDSS photometric identifier 
+   DB_SDSS         STRING    database where photometric information was obtained: DR10 or DR7
+2MASS photometric data
+   DESIG_2MASS     STRING    2MASS ID (2MASS J+)
+   RA_2MASS        DOUBLE    in degrees RA
+   DEC_2MASS       DOUBLE    in degrees Dec
+   RA_2MASS_ERR    FLOAT     error in 2mass coord, in arcsec
+   DEC_2MASS_ERR   FLOAT     error in 2mass coord, in arcsec
+   MAG_2MASS       FLOAT     Array[3]   2MASS magnitude in JHKs
+   MAGERR_2MASS    FLOAT     Array[3]   2MASS uncertainty in JHKs
+   FLAGS_2MASS     STRING    Array[4]   2MASS flags: ph_qual, rd_flg, bl_flg, and cc_flg
+   GOODPHOT_2MASS  INT       Array[3]   set to 1 if it passed internal flag checks, 0 if not
+   ERRCUT_2MASS    INT       Array[3]   set to 1 if it passed internal error cuts, 0 if not
+WISE photometric data
+   DESIG_WISE      STRING    WISE ID (WISE +)
+   RA_WISE         DOUBLE    in degrees RA
+   DEC_WISE        DOUBLE    in degrees dec
+   RA_WISE_ERR     FLOAT     in arcsec
+   DEC_WISE_ERR    FLOAT     in arcsec
+   MAG_WISE        FLOAT     Array[4]    W1W2W3W4 photometry respectively
+   MAGERR_WISE     FLOAT     Array[4]    uncertainty in W1W2W3W4 
+   MAGSAT_WISE     FLOAT     Array[4]    saturation in each band
+   FLAGS_WISE      STRING    Array[7]    nb, na, cc_flags, ext_flag, var_flg, ph_qual, moon_lev
+   GOODPHOT_WISE   INT       Array[4]    set to 1 if it passed internal flag checks, 0 if not
+   ERRCUT_WISE     INT       Array[4]    set to 1 if it passed internal error cuts, 0 if not
+Measured from spectra
+   SN8000          FLOAT     Signal to noise per pixel near 8000A
+   EWHA            FLOAT     equivalent width of Halpha
+   EWHA_ERR        FLOAT     uncertainty in the equivalent width of Halpha
+   SNHA            FLOAT     S/N per pixel in the Halpha continuum region
+   HGTHA           FLOAT     peak hight within Halpha emission line region
+   CONSIG          FLOAT     standard deviation of the continuum near Halpha
+   ACTHA           STRING    activity classification: y is active, w is weak, m is maybe, n is no, x is too noisy
+Chi factors
+   CHI_ST          FLOAT     determined using relations in Schmidt et al. 2014
+   CHI_ST_ERR      FLOAT     
+   CHI_IZ          FLOAT     
+   CHI_IZ_ERR      FLOAT     
+   CHI_IJ          FLOAT     
+   CHI_IJ_ERR      FLOAT     
+
