@@ -1,5 +1,5 @@
 # BUD
-This repository contains public versions of the BOSS Ultracool Dwarfs catalogs - right now, that's just one catalog, associated with the [First BOSS Ultracool Dwarfs Paper](http://adsabs.harvard.edu/abs/2014arXiv1410.0014S). 
+This repository contains public versions of the BOSS Ultracool Dwarfs catalogs - right now, that's just one catalog, associated with the [First BOSS Ultracool Dwarfs Paper](http://adsabs.harvard.edu/abs/2015AJ....149..158S). 
 
 [BUD Catalog v1.0](BUD_v1_0.fits): This is a catalog of 11,820 ultacool dwarfs identified as part of the initial SDSS BUD sample. The current version of the catalog includes data used to put together the first BUD paper: coordinates, SDSS IDs (spectroscopic plate, mjd, and fiber in addition to photometric run, rerun, etc.), spectral types, SDSS-2MASS-WISE photometry, Hα detections, and calculated χ values. Please look at the associated [README file](BUD_v1_0.README.txt) for definitions of each column, and see the [BUD I Paper](http://adsabs.harvard.edu/abs/2014arXiv1410.0014S) for additional discussion. Generally, measurements are included whether they were considered "good" or "bad," so please pay attention to the various flags included.
 
